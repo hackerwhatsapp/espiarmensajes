@@ -1,0 +1,29 @@
+            - nombre: Update Node.js setup in GitHub Actions workflow
+flujo de trabajo: global.json
+  Usos: actions/setup-node@v6.4.0
+  con:
+    # Especificación de la versión a utilizar. Ejemplos: 12.x, 10.15.1, >=10.15.0.
+    versión del nodo: # opcional
+    # Archivo que contiene la especificación de la versión a utilizar. Ejemplos: package.json, .nvmrc, .node-version, .tool-versions.
+    archivo-de-versión-de-nodo: # opcional
+    # Arquitectura de destino que utilizará Node. Ejemplos: x86, x64. Se utilizará la arquitectura del sistema por defecto.
+    arquitectura: # opcional
+    # Configure esta opción si desea que la acción compruebe si existe la última versión disponible que cumpla con la especificación de versión.
+    check-latest: # opcional
+    # Registro opcional para configurar para la autenticación. Configurará el registro en un archivo .npmrc y .yarnrc a nivel de proyecto, y configurará la autenticación para que lea desde env.NODE_AUTH_TOKEN.
+    url del registro: # opcional
+    # Ámbito opcional para autenticarse contra registros con ámbito. Se recurrirá al propietario del repositorio cuando se utilice el registro de paquetes de GitHub (https://npm.pkg.github.com/).
+    ámbito: # opcional
+    # Se utiliza para obtener distribuciones de nodos desde node-versions. Dado que existe un valor predeterminado, normalmente el usuario no lo proporciona. Al ejecutar esta acción en github.com, el valor predeterminado es suficiente. Al ejecutarla en GHES, puede proporcionar un token de acceso personal para github.com si experimenta limitaciones de velocidad.
+    token: # opcional, el valor predeterminado es ${{ github.server_url == 'https://github.com' && github.token || '' }}
+    # Se utiliza para especificar un gestor de paquetes para el almacenamiento en caché en el directorio predeterminado. Valores admitidos: npm, yarn, pnpm.
+    caché: # opcional
+    # Establezca en falso para deshabilitar el almacenamiento en caché automático. De forma predeterminada, el almacenamiento en caché está habilitado cuando devEngines.packageManager o el campo packageManager de nivel superior en package.json especifican npm como el administrador de paquetes.
+    package-manager-cache: # opcional, por defecto es true
+    # Se utiliza para especificar la ruta a un archivo de dependencia: package-lock.json, yarn.lock, etc. Admite comodines o una lista de nombres de archivo para almacenar en caché múltiples dependencias.
+    ruta de dependencia de caché: # opcional
+    # Se utiliza para especificar un espejo alternativo desde donde descargar los binarios de Node.js.
+    espejo: # opcional
+    # El token utilizado como encabezado de autorización al obtener desde el espejo
+    token espejo: # opcional
+          
